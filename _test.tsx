@@ -1,34 +1,37 @@
 import React from 'react';
 
 /**
- * @description generates a list of math results by calling various functions and
- * combining their outputs.
+ * @description Generates a list of mathematical results based on input values, using
+ * various mathematical operations such as addition, subtraction, multiplication,
+ * division, modulus, power, square root, absolute value, rounding, flooring, ceiling,
+ * logging, and sine calculation.
  * 
- * @returns { number } a list of math results, each consisting of a result and its explanation.
+ * @returns { number } an HTML list of 13 math results, each represented as a list
+ * item with a unique key and descriptive label.
  */
 const MathComponent: React.FC = () => {
     /**
-     * @description takes two numerical arguments and returns their sum.
+     * @description Takes two parameters, `a` and `b`, of type `number`, and returns their
+     * sum.
      * 
-     * @param { number } a - 1st numerical value to be added to the `b` input parameter.
+     * @param { number } a - 1st number that is being added to the second number `b`.
      * 
-     * @param { number } b - 2nd number to be added to the first number provided in the
-     * `a` input parameter, and its value is used in the calculation of the function's output.
+     * @param { number } b - 2nd number to be added to the `a` parameter to produce the
+     * total sum.
      * 
-     * @returns { number } the sum of its two input arguments.
+     * @returns { number } the sum of the two input numbers.
      */
     function add(a: number, b: number): number {
         return a + b;
     }
 
     /**
-     * @description takes a `number` input, `a`, and returns its sine value using the
-     * `Math.sin()` method.
+     * @description Takes a single argument `a`, which is a number, and returns its sine
+     * value using the mathematical formula `Math.sin(a)`.
      * 
-     * @param { number } a - angular velocity of a circular motion for which the sine is
-     * calculated in the function.
+     * @param { number } a - angle to be evaluated for its sine value in the function.
      * 
-     * @returns { number } the sine of the input number.
+     * @returns { number } the sine of the input `a`, which is a number.
      */
     function sin(a: number): number {
         return Math.sin(a);
@@ -54,8 +57,8 @@ const MathComponent: React.FC = () => {
         <div>
             <h1>Math Results</h1>
             {/**
-             * @description lists results based on the `results` array. Each result is represented
-             * as a list item with a unique key and a descriptive label.
+             * @description Generates a list of results from an array of values, displaying each
+             * result on a new line with a unique index number appended to the text.
              */}
             <ul>
                 {results.map((result, index) => (
